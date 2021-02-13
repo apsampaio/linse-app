@@ -1,8 +1,9 @@
-import React from 'react';
-import {View} from 'react-native';
+import React from "react";
+
+import Landing from "./pages/Landing";
 
 const App: React.FC = () => {
-  return <View></View>;
+  return <Landing />;
 };
 
 export default App;
