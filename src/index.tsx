@@ -1,9 +1,10 @@
 import React from "react";
 
 import Landing from "./pages/Landing";
+import SignIn from "./pages/SignIn";
 
 const App: React.FC = () => {
-  return <Landing />;
+  return <SignIn />;
 };
 
 export default App;
