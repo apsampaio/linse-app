@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import colors from "../../styles/colors";
 import SecretIcon from "../../assets/secret.svg";
@@ -18,15 +18,35 @@ const Input: React.FC<InputProps> = ({
   children,
   ...rest
 }) => {
+  const [passwordVisible, setPasswordVisible] = useState(isSecret);
+  const [isFocused, setIsFocused] = useState(false);
+  const handleTogglePasswordVisible = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
   return (
-    <Container>
+    <Container isFocused={isFocused} isErrored={false}>
       <Icon>{children}</Icon>
       <TextInput
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         placeholder={placeholder}
-        secureTextEntry={isSecret}
+        secureTextEntry={passwordVisible}
         placeholderTextColor={colors.darkGray}
       />
-      <SecretIconContainer>{isSecret && <SecretIcon />}</SecretIconContainer>
+      {isSecret && (
+        <SecretIconContainer onPress={handleTogglePasswordVisible}>
+          <SecretIcon />
+        </SecretIconContainer>
+      )}
     </Container>
   );
 };

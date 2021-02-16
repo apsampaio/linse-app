@@ -1,19 +1,35 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
 import colors from "../../styles/colors";
 
-export const Container = styled.View`
+interface ContainerProps {
+  isFocused: boolean;
+  isErrored: boolean;
+}
+
+export const Container = styled.View<ContainerProps>`
   width: 100%;
   height: 40px;
-
+  border-color: ${colors.darkGray};
   border-bottom-width: 2px;
-  border-bottom-color: ${colors.darkGray};
 
   flex-direction: row;
   align-items: center;
 
   margin-bottom: 16px;
+
+  ${(props) =>
+    props.isErrored &&
+    css`
+      border-color: ${colors.red};
+    `}
+
+  ${(props) =>
+    props.isFocused &&
+    css`
+      border-color: ${colors.blue};
+    `}
 `;
 
 export const Icon = styled.View`
