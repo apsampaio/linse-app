@@ -13,8 +13,8 @@ import {
   ButtonTitle,
 } from "./styles";
 
-import CpfIcon from "../../assets/cpf.svg";
-import colors from "../../styles/colors";
+import CPFIcon from "../../assets/cpf.svg";
+import PasswordIcon from "../../assets/password.svg";
 
 const SignIn: React.FC = () => {
   return (
@@ -23,10 +23,12 @@ const SignIn: React.FC = () => {
         <HeaderTitle>Linse</HeaderTitle>
       </Header>
       <Body>
-        <Input>
-          <CpfIcon height={24} width={24} />
+        <Input placeholder={"CPF"} name="cpf">
+          <CPFIcon />
         </Input>
-        <Input />
+        <Input placeholder={"Senha"} name="password" isSecret>
+          <PasswordIcon />
+        </Input>
         <ForgotPassword>
           <ForgotPasswordTitle>Esqueceu sua senha?</ForgotPasswordTitle>
         </ForgotPassword>
