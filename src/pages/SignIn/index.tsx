@@ -1,16 +1,20 @@
 import React from "react";
 
+import Input from "../../components/Input";
+
 import {
   Container,
   Header,
   HeaderTitle,
   Body,
-  Input,
   ForgotPassword,
   ForgotPasswordTitle,
   Button,
   ButtonTitle,
 } from "./styles";
+
+import CpfIcon from "../../assets/cpf.svg";
+import colors from "../../styles/colors";
 
 const SignIn: React.FC = () => {
   return (
@@ -19,8 +23,10 @@ const SignIn: React.FC = () => {
         <HeaderTitle>Linse</HeaderTitle>
       </Header>
       <Body>
-        <Input placeholder="CPF" />
-        <Input placeholder="Senha" />
+        <Input>
+          <CpfIcon height={24} width={24} />
+        </Input>
+        <Input />
         <ForgotPassword>
           <ForgotPasswordTitle>Esqueceu sua senha?</ForgotPasswordTitle>
         </ForgotPassword>
