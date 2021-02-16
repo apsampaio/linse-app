@@ -11,6 +11,9 @@ interface InputProps {
   isSecret?: boolean;
 }
 
+// TODO - [ ] ADD INPUT MASK
+// TODO - [ ] ADD REF
+
 const Input: React.FC<InputProps> = ({
   name,
   placeholder,

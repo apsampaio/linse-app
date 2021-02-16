@@ -29,7 +29,7 @@ export const Body = styled.View`
   padding-left: 32px;
   padding-right: 32px;
 
-  padding-top: 64px;
+  padding-top: 32px;
 `;
 
 export const Input = styled.TextInput`

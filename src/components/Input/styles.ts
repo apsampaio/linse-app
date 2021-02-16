@@ -17,7 +17,7 @@ export const Container = styled.View<ContainerProps>`
   flex-direction: row;
   align-items: center;
 
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 
   ${(props) =>
     props.isErrored &&
