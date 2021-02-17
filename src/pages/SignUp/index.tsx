@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollView, KeyboardAvoidingView, Platform } from "react-native";
 
 import Input from "../../components/Input";
 
@@ -22,38 +23,53 @@ import {
 //TODO [ ]  - Dynamic inport  for icons
 const SignUp: React.FC = () => {
   return (
-    <Container>
-      <Header>
-        <HeaderTitle>Cadastrar</HeaderTitle>
-        <HeaderDescription>
-          Encontre novas oportunidades de trabalho utilizando a plataforma
-          Linse.
-        </HeaderDescription>
-      </Header>
-      <Body>
-        <Input name="name" placeholder="Nome Completo">
-          <UserIcon />
-        </Input>
-        <Input name="cpf" placeholder="CPF">
-          <CPFIcon />
-        </Input>
-        <Input name="whatsapp" placeholder="WhatsApp">
-          <WhatsAppIcon />
-        </Input>
-        <Input name="mail" placeholder="E-mail">
-          <MailIcon />
-        </Input>
-        <Input name="password" placeholder="Senha" isSecret>
-          <PasswordIcon />
-        </Input>
-        <Input name="confirmPassword" placeholder="Confirmar Senha" isSecret>
-          <PasswordIcon />
-        </Input>
-        <Button>
-          <ButtonTitle>Cadastrar</ButtonTitle>
-        </Button>
-      </Body>
-    </Container>
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : undefined}
+      enabled
+    >
+      <ScrollView
+        contentContainerStyle={{ flex: 1 }}
+        keyboardShouldPersistTaps="handled"
+      >
+        <Container>
+          <Header>
+            <HeaderTitle>Cadastrar</HeaderTitle>
+            <HeaderDescription>
+              Encontre novas oportunidades de trabalho utilizando a plataforma
+              Linse.
+            </HeaderDescription>
+          </Header>
+          <Body>
+            <Input name="name" placeholder="Nome Completo">
+              <UserIcon />
+            </Input>
+            <Input name="cpf" placeholder="CPF">
+              <CPFIcon />
+            </Input>
+            <Input name="whatsapp" placeholder="WhatsApp">
+              <WhatsAppIcon />
+            </Input>
+            <Input name="mail" placeholder="E-mail">
+              <MailIcon />
+            </Input>
+            <Input name="password" placeholder="Senha" isSecret>
+              <PasswordIcon />
+            </Input>
+            <Input
+              name="confirmPassword"
+              placeholder="Confirmar Senha"
+              isSecret
+            >
+              <PasswordIcon />
+            </Input>
+            <Button>
+              <ButtonTitle>Cadastrar</ButtonTitle>
+            </Button>
+          </Body>
+        </Container>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 

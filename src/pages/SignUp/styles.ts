@@ -3,7 +3,7 @@ import { TouchableOpacity } from "react-native";
 
 import colors from "../../styles/colors";
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   flex: 1;
   background-color: ${colors.white};
 `;
