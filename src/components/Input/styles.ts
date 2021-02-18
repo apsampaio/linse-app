@@ -46,4 +46,6 @@ export const TextInput = styled.TextInput`
   flex: 1;
   color: #000000;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 `;

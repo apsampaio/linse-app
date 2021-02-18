@@ -35,8 +35,8 @@ export const HeaderDescription = styled.Text`
 `;
 
 export const Body = styled.View`
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-bottom: 32px;
   padding-top: 32px;
 `;

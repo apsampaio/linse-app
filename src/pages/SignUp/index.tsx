@@ -13,7 +13,6 @@ import {
   ButtonTitle,
 } from "./styles";
 
-//TODO [ ]  - Add SafeAreaView // KeyboardAvoidArea
 const SignUp: React.FC = () => {
   return (
     <KeyboardAvoidingView
