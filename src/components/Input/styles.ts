@@ -32,7 +32,7 @@ export const Container = styled.View<ContainerProps>`
     `}
 `;
 
-export const Icon = styled.View`
+export const IconContainer = styled.View`
   margin-left: 8px;
   padding-right: 16px;
 `;

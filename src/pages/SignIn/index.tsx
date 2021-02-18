@@ -13,9 +13,6 @@ import {
   ButtonTitle,
 } from "./styles";
 
-import CPFIcon from "../../assets/cpf.svg";
-import PasswordIcon from "../../assets/password.svg";
-
 const SignIn: React.FC = () => {
   return (
     <Container>
@@ -23,12 +20,17 @@ const SignIn: React.FC = () => {
         <HeaderTitle>Linse</HeaderTitle>
       </Header>
       <Body>
-        <Input placeholder={"CPF"} name="cpf">
-          <CPFIcon />
-        </Input>
-        <Input placeholder={"Senha"} name="password" isSecret>
-          <PasswordIcon />
-        </Input>
+        <Input
+          placeholder={"CPF"}
+          name="cpf"
+          Icon={require("../../assets/cpf.svg").default}
+        />
+        <Input
+          placeholder={"Senha"}
+          name="password"
+          isSecret
+          Icon={require("../../assets/password.svg").default}
+        />
         <ForgotPassword>
           <ForgotPasswordTitle>Esqueceu sua senha?</ForgotPasswordTitle>
         </ForgotPassword>

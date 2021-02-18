@@ -3,12 +3,18 @@ import React, { useState } from "react";
 import colors from "../../styles/colors";
 import SecretIcon from "../../assets/secret.svg";
 
-import { Container, TextInput, Icon, SecretIconContainer } from "./styles";
+import {
+  Container,
+  TextInput,
+  IconContainer,
+  SecretIconContainer,
+} from "./styles";
 
 interface InputProps {
   name: string;
   placeholder: string;
   isSecret?: boolean;
+  Icon?: any;
 }
 
 // TODO - [ ] ADD INPUT MASK
@@ -16,9 +22,9 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({
   name,
+  Icon,
   placeholder,
   isSecret = false,
-  children,
   ...rest
 }) => {
   const [passwordVisible, setPasswordVisible] = useState(isSecret);
@@ -37,7 +43,9 @@ const Input: React.FC<InputProps> = ({
 
   return (
     <Container isFocused={isFocused} isErrored={false}>
-      <Icon>{children}</Icon>
+      <IconContainer>
+        <Icon />
+      </IconContainer>
       <TextInput
         onFocus={handleFocus}
         onBlur={handleBlur}
