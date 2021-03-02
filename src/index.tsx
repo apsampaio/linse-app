@@ -1,12 +1,19 @@
 import React from "react";
+import { StatusBar, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-import Landing from "./pages/Landing";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import SignUpSuccess from "./pages/SignUpSuccess";
+import colors from "./styles/colors";
+import Routes from "./routes";
 
 const App: React.FC = () => {
-  return <SignUpSuccess />;
+  return (
+    <NavigationContainer>
+      <StatusBar barStyle="light-content" backgroundColor={colors.blue} />
+      <View style={{ flex: 1, backgroundColor: colors.blue }}>
+        <Routes />
+      </View>
+    </NavigationContainer>
+  );
 };
 
 export default App;
