@@ -1,6 +1,7 @@
 import React from "react";
 
 import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   Container,
@@ -16,6 +17,7 @@ import {
 } from "./styles";
 
 const Landing: React.FC = () => {
+  const navigation = useNavigation();
   return (
     <Container>
       <UpContainer>
@@ -23,10 +25,10 @@ const Landing: React.FC = () => {
         <ImageFront height={"90%"} />
       </UpContainer>
       <BottomContainer>
-        <SignInButton>
+        <SignInButton onPress={() => navigation.navigate("SignIn")}>
           <SignInButtonText>Entrar</SignInButtonText>
         </SignInButton>
-        <SignUpButton>
+        <SignUpButton onPress={() => navigation.navigate("SignUp")}>
           <SignUpButtonText>Cadastrar</SignUpButtonText>
         </SignUpButton>
         <TouchableOpacity>
