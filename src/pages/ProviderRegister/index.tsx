@@ -8,13 +8,12 @@ import {
   Container,
   Header,
   HeaderTitle,
-  HeaderDescription,
   Body,
   Button,
   ButtonTitle,
 } from "./styles";
 
-const SignUp: React.FC = () => {
+const ProviderRegister: React.FC = () => {
   const navigation = useNavigation();
 
   return (
@@ -25,11 +24,7 @@ const SignUp: React.FC = () => {
     >
       <Container keyboardShouldPersistTaps="handled">
         <Header>
-          <HeaderTitle>Cadastrar</HeaderTitle>
-          <HeaderDescription>
-            Encontre novas oportunidades de trabalho utilizando a plataforma
-            Linse.
-          </HeaderDescription>
+          <HeaderTitle>Cadastro para Prestador de Serviços</HeaderTitle>
         </Header>
         <Body>
           <Input
@@ -53,11 +48,6 @@ const SignUp: React.FC = () => {
             Icon={require("../../assets/mail.svg").default}
           />
           <Input
-            name="cep"
-            placeholder="CEP"
-            Icon={require("../../assets/cep.svg").default}
-          />
-          <Input
             name="password"
             placeholder="Senha"
             isSecret
@@ -69,7 +59,7 @@ const SignUp: React.FC = () => {
             isSecret
             Icon={require("../../assets/password.svg").default}
           />
-          <Button onPress={() => navigation.navigate("ProviderRegister")}>
+          <Button onPress={() => navigation.navigate("SignUpSuccess")}>
             <ButtonTitle>Próximo</ButtonTitle>
           </Button>
         </Body>
@@ -78,4 +68,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export default SignUp;
+export default ProviderRegister;

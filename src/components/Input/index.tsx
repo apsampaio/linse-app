@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import colors from "../../styles/colors";
-import SecretIcon from "../../assets/secret.svg";
+import EyeIcon from "../../assets/eye.svg";
+import EyeOffIcon from "../../assets/eye-off.svg";
 
 import {
   Container,
@@ -44,7 +45,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <Container isFocused={isFocused} isErrored={false}>
       <IconContainer>
-        <Icon />
+        <Icon color={isFocused ? colors.blue : colors.darkGray} />
       </IconContainer>
       <TextInput
         onFocus={handleFocus}
@@ -55,7 +56,11 @@ const Input: React.FC<InputProps> = ({
       />
       {isSecret && (
         <SecretIconContainer onPress={handleTogglePasswordVisible}>
-          <SecretIcon />
+          {passwordVisible ? (
+            <EyeIcon color={colors.darkGray} />
+          ) : (
+            <EyeOffIcon color={colors.blue} />
+          )}
         </SecretIconContainer>
       )}
     </Container>

@@ -4,7 +4,11 @@ import { Container, Title, Description, Button, ButtonText } from "./styles";
 import CheckDecagram from "../../assets/check-decagram.svg";
 import TeamMeeting from "../../assets/team_meeting.svg";
 
+import { useNavigation } from "@react-navigation/native";
+
 const SignUpSuccess: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <CheckDecagram />
@@ -13,7 +17,11 @@ const SignUpSuccess: React.FC = () => {
         Agora você já pode acessar a Linse e conhecer novas oportunidades.
       </Description>
       <TeamMeeting />
-      <Button>
+      <Button
+        onPress={() => {
+          navigation.navigate("SignIn");
+        }}
+      >
         <ButtonText>Explorar conta</ButtonText>
       </Button>
     </Container>
