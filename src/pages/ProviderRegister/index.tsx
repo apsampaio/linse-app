@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { KeyboardAvoidingView, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -9,12 +9,17 @@ import {
   Header,
   HeaderTitle,
   Body,
+  ButtonAgree,
+  ButtonAgreeText,
+  ButtonDisagree,
+  ButtonDisagreeText,
   Button,
   ButtonTitle,
 } from "./styles";
 
 const ProviderRegister: React.FC = () => {
   const navigation = useNavigation();
+  const [isProvider, setIsProvider] = useState<null | boolean>(null);
 
   return (
     <KeyboardAvoidingView
@@ -27,40 +32,42 @@ const ProviderRegister: React.FC = () => {
           <HeaderTitle>Cadastro para Prestador de Serviços</HeaderTitle>
         </Header>
         <Body>
-          <Input
-            name="name"
-            placeholder="Nome Completo"
-            Icon={require("../../assets/user.svg").default}
-          />
-          <Input
-            name="cpf"
-            placeholder="CPF"
-            Icon={require("../../assets/cpf.svg").default}
-          />
-          <Input
-            name="whatsapp"
-            placeholder="WhatsApp"
-            Icon={require("../../assets/message-circle.svg").default}
-          />
-          <Input
-            name="mail"
-            placeholder="E-mail"
-            Icon={require("../../assets/mail.svg").default}
-          />
-          <Input
-            name="password"
-            placeholder="Senha"
-            isSecret
-            Icon={require("../../assets/password.svg").default}
-          />
-          <Input
-            name="confirmPassword"
-            placeholder="Confirmar Senha"
-            isSecret
-            Icon={require("../../assets/password.svg").default}
-          />
-          <Button onPress={() => navigation.navigate("SignUpSuccess")}>
-            <ButtonTitle>Próximo</ButtonTitle>
+          <ButtonDisagree
+            isProvider={isProvider}
+            onPress={() => setIsProvider(false)}
+          >
+            <ButtonDisagreeText isProvider={isProvider}>
+              Não tenho interesse!
+            </ButtonDisagreeText>
+          </ButtonDisagree>
+          <ButtonAgree
+            isProvider={isProvider}
+            onPress={() => setIsProvider(true)}
+          >
+            <ButtonAgreeText isProvider={isProvider}>
+              Tenho interesse!
+            </ButtonAgreeText>
+          </ButtonAgree>
+          {isProvider && (
+            <>
+              <Input
+                name="carrer"
+                placeholder="Profissão"
+                Icon={require("../../assets/career.svg").default}
+              />
+              <Input
+                name="average-value"
+                placeholder="Valor por serviço"
+                Icon={require("../../assets/money.svg").default}
+              />
+            </>
+          )}
+          <Button
+            onPress={() => navigation.navigate("SignUpSuccess")}
+            disabled={isProvider === null}
+            isProvider={isProvider}
+          >
+            <ButtonTitle>Finalizar</ButtonTitle>
           </Button>
         </Body>
       </Container>
