@@ -2,6 +2,8 @@ import React from "react";
 
 import Input from "../../components/Input";
 
+import { useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   Header,
@@ -14,6 +16,8 @@ import {
 } from "./styles";
 
 const SignIn: React.FC = () => {
+  const navigation = useNavigation();
+  
   return (
     <Container>
       <Header>
@@ -35,7 +39,7 @@ const SignIn: React.FC = () => {
           <ForgotPasswordTitle>Esqueceu sua senha?</ForgotPasswordTitle>
         </ForgotPassword>
         <Button>
-          <ButtonTitle>Entrar</ButtonTitle>
+          <ButtonTitle onPress={() => navigation.navigate("Home")}>Entrar</ButtonTitle>
         </Button>
       </Body>
     </Container>

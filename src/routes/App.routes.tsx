@@ -6,6 +6,7 @@ import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import ProviderRegister from "../pages/ProviderRegister";
 import SignUpSuccess from "../pages/SignUpSuccess";
+import Home from "../pages/Home";
 
 const App = createStackNavigator();
 
@@ -21,6 +22,7 @@ const AppRoutes: React.FC = () => {
       <App.Screen name="SignUp" component={SignUp} />
       <App.Screen name="ProviderRegister" component={ProviderRegister} />
       <App.Screen name="SignUpSuccess" component={SignUpSuccess} />
+      <App.Screen name="Home" component={Home} />
     </App.Navigator>
   );
 };
