@@ -10,22 +10,38 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   height: 30%;
+  padding: 16px 16px;
   background-color: ${colors.blue};
 
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
-export const HeaderGreeting = styled.Text`
+export const HeaderUp = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
 
+export const HeaderGreeting = styled.View``;
+
+export const HeaderGreetingText = styled.Text`
+  font-size: 18px;
+  color: ${colors.white};
+`;
+
+export const HeaderProfileButton = styled(TouchableOpacity)`
+  flex-direction: row;
+`;
+
+export const HeaderProfileText = styled.Text`
+  font-size: 18px;
+  margin-left: 8px;
+  color: ${colors.yellow};
 `;
 
 export const HeaderTitle = styled.Text`
   font-size: 38px;
-  font-weight: 500;
+  font-weight: 700;
   color: ${colors.white};
-
-  margin-left: 16px;
-  margin-bottom: 16px;
 `;
 
 export const Body = styled.View`
@@ -34,4 +50,47 @@ export const Body = styled.View`
   padding-right: 32px;
 
   padding-top: 32px;
+`;
+
+export const ServiceTitle = styled.Text`
+  font-size: 26px;
+  font-weight: 700;
+  color: ${colors.blackPurple};
+`;
+
+export const ServiceContainer = styled.View`
+  flex-direction: row;
+
+  padding-top: 16px;
+
+  justify-content: space-between;
+`;
+
+export const ServiceCard = styled.TouchableOpacity`
+  width: 154px;
+  height: 154px;
+
+  padding-top: 16px;
+  padding-bottom: 8px;
+
+  background-color: ${colors.lightBlue};
+
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ServiceCardImage = styled.View`
+  width: 100px;
+  height: 100px;
+  background-color: ${colors.white};
+  border-radius: 100px;
+
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ServiceCardTitle = styled.Text`
+  color: ${colors.blackPurple};
+  font-size: 16px;
+  font-weight: 700;
 `;
