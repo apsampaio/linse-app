@@ -74,6 +74,7 @@ export const ServiceCard = styled.TouchableOpacity`
   padding-bottom: 8px;
 
   background-color: ${colors.lightBlue};
+  border-radius: 2px;
 
   align-items: center;
   justify-content: space-between;
