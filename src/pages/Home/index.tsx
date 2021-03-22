@@ -6,6 +6,8 @@ import colors from "../../styles/colors";
 import CleaningImage from "../../assets/jobs/cleaning.svg";
 import TrimmingImage from "../../assets/jobs/trimming.svg";
 
+import { useNavigation } from "@react-navigation/core";
+
 import {
   Container,
   Header,
@@ -24,6 +26,7 @@ import {
 } from "./styles";
 
 const Home: React.FC = () => {
+  const navigation = useNavigation();
   return (
     <Container>
       <Header>
@@ -32,7 +35,7 @@ const Home: React.FC = () => {
             <HeaderGreetingText>Bem vindo,</HeaderGreetingText>
             <HeaderGreetingText>Andre Sampaio</HeaderGreetingText>
           </HeaderGreeting>
-          <HeaderProfileButton>
+          <HeaderProfileButton onPress={() => navigation.navigate("Profile")}>
             <UserIcon fill={colors.yellow} />
             <HeaderProfileText>Perfil</HeaderProfileText>
           </HeaderProfileButton>
