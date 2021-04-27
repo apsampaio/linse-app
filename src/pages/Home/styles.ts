@@ -45,9 +45,8 @@ export const HeaderTitle = styled.Text`
 `;
 
 export const Body = styled.View`
-  flex-grow: 1;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   padding-top: 32px;
 `;
@@ -55,6 +54,7 @@ export const Body = styled.View`
 export const ServiceTitle = styled.Text`
   font-size: 26px;
   font-weight: 700;
+
   color: ${colors.blackPurple};
 `;
 
@@ -92,4 +92,14 @@ export const ServiceCardTitle = styled.Text`
   color: ${colors.blackPurple};
   font-size: 16px;
   font-weight: 700;
+`;
+
+export const Separator = styled.View`
+  height: 1px;
+  width: 100%;
+
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  background-color: ${colors.gray};
 `;

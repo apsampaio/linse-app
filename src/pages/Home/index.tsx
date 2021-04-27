@@ -23,6 +23,7 @@ import {
   ServiceCard,
   ServiceCardImage,
   ServiceCardTitle,
+  Separator,
 } from "./styles";
 
 const Home: React.FC = () => {
@@ -58,6 +59,8 @@ const Home: React.FC = () => {
             <ServiceCardTitle>Jardinagem</ServiceCardTitle>
           </ServiceCard>
         </ServiceContainer>
+        <Separator />
+        <ServiceTitle>Minhas Atividades</ServiceTitle>
       </Body>
     </Container>
   );
