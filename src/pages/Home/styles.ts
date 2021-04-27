@@ -58,12 +58,8 @@ export const ServiceTitle = styled.Text`
   color: ${colors.blackPurple};
 `;
 
-export const ServiceContainer = styled.View`
-  flex-direction: row;
-
+export const ServiceContainer = styled.ScrollView`
   padding-top: 16px;
-
-  justify-content: space-between;
 `;
 
 export const ServiceCard = styled.TouchableOpacity`
@@ -75,6 +71,8 @@ export const ServiceCard = styled.TouchableOpacity`
 
   background-color: ${colors.lightBlue};
   border-radius: 2px;
+
+  margin-left: 16px;
 
   align-items: center;
   justify-content: space-between;

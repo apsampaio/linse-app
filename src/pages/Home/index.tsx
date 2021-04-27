@@ -44,7 +44,7 @@ const Home: React.FC = () => {
       </Header>
       <Body>
         <ServiceTitle>Serviços</ServiceTitle>
-        <ServiceContainer>
+        <ServiceContainer horizontal>
           <ServiceCard>
             <ServiceCardImage>
               <CleaningImage />
