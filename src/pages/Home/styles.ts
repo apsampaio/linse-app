@@ -5,7 +5,7 @@ import colors from "../../styles/colors";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${colors.white};
+  background-color: ${colors.lightGray};
 `;
 
 export const Header = styled.View`
@@ -44,23 +44,21 @@ export const HeaderTitle = styled.Text`
   color: ${colors.white};
 `;
 
-export const Body = styled.View`
+export const Body = styled.ScrollView`
   padding-left: 16px;
   padding-right: 16px;
-
-  padding-top: 32px;
 `;
 
 export const ServiceTitle = styled.Text`
   font-size: 26px;
   font-weight: 700;
 
+  margin-bottom: 24px;
+
   color: ${colors.blackPurple};
 `;
 
-export const ServiceContainer = styled.ScrollView`
-  padding-top: 16px;
-`;
+export const ServiceContainer = styled.ScrollView``;
 
 export const ServiceCard = styled.TouchableOpacity`
   width: 154px;
@@ -102,4 +100,16 @@ export const Separator = styled.View`
   margin-top: 32px;
 
   background-color: ${colors.gray};
+`;
+
+export const MenuCard = styled.View`
+  height: 64px;
+  width: 100%;
+
+  border-radius: 2px;
+  margin-bottom: 16px;
+
+  flex-direction: column;
+
+  background-color: ${colors.white};
 `;
