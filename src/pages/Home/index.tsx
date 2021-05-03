@@ -7,6 +7,7 @@ import CleaningImage from "../../assets/jobs/cleaning.svg";
 import TrimmingImage from "../../assets/jobs/trimming.svg";
 
 import { useNavigation } from "@react-navigation/core";
+import MenuCard from "../../components/MenuCard";
 
 import {
   Container,
@@ -24,7 +25,6 @@ import {
   ServiceCardImage,
   ServiceCardTitle,
   Separator,
-  MenuCard,
 } from "./styles";
 
 const Home: React.FC = () => {
@@ -62,8 +62,18 @@ const Home: React.FC = () => {
         </ServiceContainer>
         <Separator />
         <ServiceTitle>Minhas Atividades</ServiceTitle>
-        <MenuCard />
-        <MenuCard />
+        <MenuCard
+          title="SOLICITAR SERVIÇO"
+          Icon={require("../../assets/plus-square.svg").default}
+        />
+        <MenuCard
+          title="MEUS SERVIÇOS"
+          Icon={require("../../assets/briefcase.svg").default}
+        />
+        <MenuCard
+          title="MINHAS OFERTAS"
+          Icon={require("../../assets/dollar-sign.svg").default}
+        />
       </Body>
     </Container>
   );

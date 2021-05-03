@@ -101,15 +101,3 @@ export const Separator = styled.View`
 
   background-color: ${colors.gray};
 `;
-
-export const MenuCard = styled.View`
-  height: 64px;
-  width: 100%;
-
-  border-radius: 2px;
-  margin-bottom: 16px;
-
-  flex-direction: column;
-
-  background-color: ${colors.white};
-`;
