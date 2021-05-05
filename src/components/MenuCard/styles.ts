@@ -30,4 +30,28 @@ export const Title = styled.Text`
   color: ${colors.blackPurple};
 
   margin-left: 12px;
+  margin-right: 12px;
+`;
+
+export const Notification = styled.View`
+  width: 16px;
+  height: 16px;
+
+  margin-top: 4px;
+  padding-bottom: 4px;
+
+  background-color: ${colors.salmon};
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const NotificationText = styled.Text`
+  font-weight: bold;
+  font-size: 10px;
+  color: ${colors.white};
+
+  line-height: 12px;
 `;

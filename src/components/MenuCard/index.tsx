@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
-import { Container, Title, Content } from "./styles";
+import {
+  Container,
+  Title,
+  Content,
+  Notification,
+  NotificationText,
+} from "./styles";
 import Chevron from "./chevron-right.svg";
 
 interface MenuProps {
@@ -22,6 +28,9 @@ const MenuCard: React.FC<MenuProps> = ({
       <Content>
         <Icon />
         <Title>{title}</Title>
+        <Notification>
+          <NotificationText>1</NotificationText>
+        </Notification>
       </Content>
       <Chevron />
     </Container>
