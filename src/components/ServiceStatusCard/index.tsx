@@ -9,36 +9,28 @@ import {
   Notification,
   NotificationText,
 } from "./styles";
+
 import Chevron from "../../assets/services/chevron.svg";
 
-interface MenuProps extends TouchableOpacityProps {
+interface ServiceCardProps extends TouchableOpacityProps {
   title: string;
   Icon?: any;
-  notification?: boolean;
 }
 
-const MenuCard: React.FC<MenuProps> = ({
+const ServiceStatusCard: React.FC<ServiceCardProps> = ({
   title,
   Icon,
-  notification = false,
   ...rest
 }) => {
-  const [hasNotification, setHasNotification] = useState(notification);
-
   return (
     <Container {...rest}>
       <Content>
-        <Icon />
+        {Icon && <Icon />}
         <Title>{title}</Title>
-        {hasNotification && (
-          <Notification>
-            <NotificationText>1</NotificationText>
-          </Notification>
-        )}
       </Content>
       <Chevron />
     </Container>
   );
 };
 
-export default MenuCard;
+export default ServiceStatusCard;

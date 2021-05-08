@@ -68,6 +68,10 @@ const Home: React.FC = () => {
           Icon={require("../../assets/plus-square.svg").default}
         />
         <MenuCard
+          onPress={() => {
+            console.log("tet");
+            navigation.navigate("MyServices");
+          }}
           title="MEUS SERVIÇOS"
           Icon={require("../../assets/briefcase.svg").default}
         />
