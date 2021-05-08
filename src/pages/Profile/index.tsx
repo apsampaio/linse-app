@@ -3,6 +3,7 @@ import React from "react";
 
 import ExitIcon from "../../assets/exit.svg";
 import RatingIcon from "../../assets/rating.svg";
+import MenuCard from "../../components/MenuCard";
 
 import {
   Container,
@@ -47,7 +48,20 @@ const Profile: React.FC = () => {
           </RatingContainer>
         </HeaderDown>
       </Header>
-      <Body></Body>
+      <Body>
+        <MenuCard
+          title="MEUS DADOS"
+          Icon={require("../../assets/profile/clipboard.svg").default}
+        />
+        <MenuCard
+          title="QUESTÕES FREQUENTES"
+          Icon={require("../../assets/profile/help.svg").default}
+        />
+        <MenuCard
+          title="MANUAL DO USUÁRIO"
+          Icon={require("../../assets/profile/book.svg").default}
+        />
+      </Body>
     </Container>
   );
 };
