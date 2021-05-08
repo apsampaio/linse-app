@@ -3,13 +3,13 @@ import { TouchableOpacity } from "react-native";
 
 import colors from "../../styles/colors";
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   flex: 1;
   background-color: ${colors.lightGray};
 `;
 
 export const Header = styled.View`
-  height: 30%;
+  height: 150px;
   padding: 16px 16px;
   background-color: ${colors.blue};
 
@@ -44,9 +44,14 @@ export const HeaderTitle = styled.Text`
   color: ${colors.white};
 `;
 
-export const Body = styled.ScrollView`
+export const Body = styled.View`
   padding-left: 16px;
   padding-right: 16px;
+
+  margin-top: 16px;
+
+  flex: 1;
+  padding-bottom: 16px;
 `;
 
 export const ServiceTitle = styled.Text`
@@ -96,8 +101,8 @@ export const Separator = styled.View`
   height: 1px;
   width: 100%;
 
-  margin-bottom: 32px;
-  margin-top: 32px;
+  margin-bottom: 16px;
+  margin-top: 16px;
 
   background-color: ${colors.gray};
 `;

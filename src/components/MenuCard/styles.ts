@@ -50,8 +50,11 @@ export const Notification = styled.View`
 
 export const NotificationText = styled.Text`
   font-weight: bold;
+  width: 10px;
+  height: 12px;
+
+  text-align: center;
+
   font-size: 10px;
   color: ${colors.white};
-
-  line-height: 12px;
 `;

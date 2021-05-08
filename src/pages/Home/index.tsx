@@ -45,7 +45,7 @@ const Home: React.FC = () => {
         <HeaderTitle>Linse</HeaderTitle>
       </Header>
       <Body>
-        <ServiceTitle>Serviços</ServiceTitle>
+        <ServiceTitle>Serviços disponíveis</ServiceTitle>
         <ServiceContainer horizontal>
           <ServiceCard>
             <ServiceCardImage>
@@ -61,8 +61,9 @@ const Home: React.FC = () => {
           </ServiceCard>
         </ServiceContainer>
         <Separator />
-        <ServiceTitle>Minhas Atividades</ServiceTitle>
+        <ServiceTitle>Minhas atividades</ServiceTitle>
         <MenuCard
+          notification={true}
           title="SOLICITAR SERVIÇO"
           Icon={require("../../assets/plus-square.svg").default}
         />

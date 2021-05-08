@@ -28,9 +28,11 @@ const MenuCard: React.FC<MenuProps> = ({
       <Content>
         <Icon />
         <Title>{title}</Title>
-        <Notification>
-          <NotificationText>1</NotificationText>
-        </Notification>
+        {hasNotification && (
+          <Notification>
+            <NotificationText>1</NotificationText>
+          </Notification>
+        )}
       </Content>
       <Chevron />
     </Container>
