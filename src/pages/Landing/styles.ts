@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
 import colors from "../../styles/colors";
-import LandingImage from "../../assets/landing_image.svg";
 
 export const Container = styled.View`
   flex: 1;
@@ -22,10 +21,10 @@ export const Title = styled.Text`
   padding-right: 32px;
 `;
 
-export const ImageFront = styled(LandingImage)`
-  z-index: 2;
-  margin-bottom: -20px;
-`;
+// export const ImageFront = styled(LandingImage)`
+//   z-index: 2;
+//   margin-bottom: -20px;
+// `;
 
 export const BottomContainer = styled.View`
   background-color: ${colors.blue};

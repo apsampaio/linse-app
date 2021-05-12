@@ -3,9 +3,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { MyServicesDone, MyServicesOpen } from "../pages/MyServices";
 
-import OpenIcon from "../assets/services/clock.svg";
-import ClosedIcon from "../assets/services/check.svg";
-
 import colors from "../styles/colors";
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -45,34 +42,34 @@ const MyServicesTabs = () => {
       <Screen
         name="Aberto"
         component={MyServicesOpen}
-        options={{
-          tabBarLabel: "Aberto",
-          tabBarIcon: ({ color, size, focused }) => {
-            return (
-              <OpenIcon
-                width={size}
-                height={size}
-                color={focused ? colors.blue : color}
-              />
-            );
-          },
-        }}
+        // options={{
+        //   tabBarLabel: "Aberto",
+        //   tabBarIcon: ({ color, size, focused }) => {
+        //     return (
+        //       <OpenIcon
+        //         width={size}
+        //         height={size}
+        //         color={focused ? colors.blue : color}
+        //       />
+        //     );
+        //   },
+        // }}
       />
       <Screen
         name="Finalizado"
         component={MyServicesDone}
-        options={{
-          tabBarLabel: "Finalizado",
-          tabBarIcon: ({ color, size, focused }) => {
-            return (
-              <ClosedIcon
-                width={size}
-                height={size}
-                color={focused ? colors.blue : color}
-              />
-            );
-          },
-        }}
+        // options={{
+        //   tabBarLabel: "Finalizado",
+        //   tabBarIcon: ({ color, size, focused }) => {
+        //     return (
+        //       <ClosedIcon
+        //         width={size}
+        //         height={size}
+        //         color={focused ? colors.blue : color}
+        //       />
+        //     );
+        //   },
+        // }}
       />
     </Navigator>
   );

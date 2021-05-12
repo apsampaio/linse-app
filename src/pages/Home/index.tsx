@@ -1,10 +1,6 @@
 import React from "react";
 
-import UserIcon from "../../assets/user.svg";
 import colors from "../../styles/colors";
-
-import CleaningImage from "../../assets/jobs/cleaning.svg";
-import TrimmingImage from "../../assets/jobs/trimming.svg";
 
 import { useNavigation } from "@react-navigation/core";
 import MenuCard from "../../components/MenuCard";
@@ -38,7 +34,7 @@ const Home: React.FC = () => {
             <HeaderGreetingText>Andre Sampaio</HeaderGreetingText>
           </HeaderGreeting>
           <HeaderProfileButton onPress={() => navigation.navigate("Profile")}>
-            <UserIcon fill={colors.yellow} />
+            {/* <UserIcon fill={colors.yellow} /> */}
             <HeaderProfileText>Perfil</HeaderProfileText>
           </HeaderProfileButton>
         </HeaderUp>
@@ -48,15 +44,11 @@ const Home: React.FC = () => {
         <ServiceTitle>Serviços disponíveis</ServiceTitle>
         <ServiceContainer horizontal>
           <ServiceCard>
-            <ServiceCardImage>
-              <CleaningImage />
-            </ServiceCardImage>
+            <ServiceCardImage>{/* <CleaningImage /> */}</ServiceCardImage>
             <ServiceCardTitle>Limpeza</ServiceCardTitle>
           </ServiceCard>
           <ServiceCard>
-            <ServiceCardImage>
-              <TrimmingImage />
-            </ServiceCardImage>
+            <ServiceCardImage>{/* <TrimmingImage /> */}</ServiceCardImage>
             <ServiceCardTitle>Jardinagem</ServiceCardTitle>
           </ServiceCard>
         </ServiceContainer>
@@ -69,7 +61,6 @@ const Home: React.FC = () => {
         />
         <MenuCard
           onPress={() => {
-            console.log("tet");
             navigation.navigate("MyServices");
           }}
           title="MEUS SERVIÇOS"

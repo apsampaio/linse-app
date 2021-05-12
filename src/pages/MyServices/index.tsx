@@ -3,7 +3,7 @@ import React from "react";
 
 import { Container, Body, Header, HeaderTitle } from "./styles";
 
-import ServiceStatusCard from "../../components/ServiceStatusCard";
+import StatusCard from "../../components/StatusCard";
 
 export const MyServicesDone: React.FC = () => {
   const navigation = useNavigation();
@@ -14,8 +14,8 @@ export const MyServicesDone: React.FC = () => {
         <HeaderTitle>Meus Serviços</HeaderTitle>
       </Header>
       <Body>
-        <ServiceStatusCard
-          title="Teste"
+        <StatusCard
+          title="tes"
           Icon={require("../../assets/dollar-sign.svg").default}
         />
       </Body>

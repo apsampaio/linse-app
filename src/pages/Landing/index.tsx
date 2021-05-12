@@ -7,7 +7,6 @@ import {
   Container,
   UpContainer,
   Title,
-  ImageFront,
   BottomContainer,
   SignInButton,
   SignInButtonText,
@@ -22,7 +21,7 @@ const Landing: React.FC = () => {
     <Container>
       <UpContainer>
         <Title>Linse</Title>
-        <ImageFront height={"90%"} />
+        {/* <ImageFront height={"90%"} /> */}
       </UpContainer>
       <BottomContainer>
         <SignInButton onPress={() => navigation.navigate("SignIn")}>

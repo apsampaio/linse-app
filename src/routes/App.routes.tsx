@@ -8,7 +8,6 @@ import ProviderRegister from "../pages/ProviderRegister";
 import SignUpSuccess from "../pages/SignUpSuccess";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
-import MyServices from "../pages/MyServices";
 
 import MyServicesTabs from "./myservices.routes";
 

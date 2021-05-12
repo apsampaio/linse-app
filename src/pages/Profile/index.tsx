@@ -1,8 +1,8 @@
 import { useNavigation } from "@react-navigation/core";
 import React from "react";
 
-import ExitIcon from "../../assets/exit.svg";
-import RatingIcon from "../../assets/rating.svg";
+// import ExitIcon from "../../assets/exit.svg";
+// import RatingIcon from "../../assets/rating.svg";
 import MenuCard from "../../components/MenuCard";
 
 import {
@@ -28,7 +28,7 @@ const Profile: React.FC = () => {
       <Header>
         <HeaderUp>
           <HeaderExitButton onPress={() => navigation.navigate("SignIn")}>
-            <ExitIcon />
+            {/* <ExitIcon /> */}
             <HeaderExitText>Sair</HeaderExitText>
           </HeaderExitButton>
         </HeaderUp>
@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
           <RatingContainer>
             <RatingTitle>AVALIAÇÃO</RatingTitle>
             <RatingScore>5.0</RatingScore>
-            <RatingIcon width={16} height={16} />
+            {/* <RatingIcon width={16} height={16} /> */}
           </RatingContainer>
         </HeaderDown>
       </Header>

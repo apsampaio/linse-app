@@ -9,7 +9,6 @@ import {
   Notification,
   NotificationText,
 } from "./styles";
-import Chevron from "../../assets/services/chevron.svg";
 
 interface MenuProps extends TouchableOpacityProps {
   title: string;
@@ -26,9 +25,9 @@ const MenuCard: React.FC<MenuProps> = ({
   const [hasNotification, setHasNotification] = useState(notification);
 
   return (
-    <Container {...rest}>
+    <Container>
       <Content>
-        <Icon />
+        {/* <Icon /> */}
         <Title>{title}</Title>
         {hasNotification && (
           <Notification>
@@ -36,7 +35,7 @@ const MenuCard: React.FC<MenuProps> = ({
           </Notification>
         )}
       </Content>
-      <Chevron />
+      {/* <Chevron /> */}
     </Container>
   );
 };
