@@ -26,7 +26,7 @@ export const HeaderExitButton = styled(TouchableOpacity)`
 
 export const HeaderExitText = styled.Text`
   font-size: 18px;
-  margin-left: 8px;
+  margin-right: 8px;
   color: ${colors.yellow};
 `;
 

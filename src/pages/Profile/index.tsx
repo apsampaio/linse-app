@@ -1,9 +1,9 @@
 import { useNavigation } from "@react-navigation/core";
 import React from "react";
 
-// import ExitIcon from "../../assets/exit.svg";
-// import RatingIcon from "../../assets/rating.svg";
 import MenuCard from "../../components/MenuCard";
+
+import { AntDesign, Feather } from "@expo/vector-icons";
 
 import {
   Container,
@@ -20,6 +20,8 @@ import {
   Body,
 } from "./styles";
 
+import colors from "../../styles/colors";
+
 const Profile: React.FC = () => {
   const navigation = useNavigation();
 
@@ -28,8 +30,8 @@ const Profile: React.FC = () => {
       <Header>
         <HeaderUp>
           <HeaderExitButton onPress={() => navigation.navigate("SignIn")}>
-            {/* <ExitIcon /> */}
             <HeaderExitText>Sair</HeaderExitText>
+            <Feather name="log-out" size={24} color={colors.yellow} />
           </HeaderExitButton>
         </HeaderUp>
         <HeaderDown>
@@ -44,23 +46,20 @@ const Profile: React.FC = () => {
           <RatingContainer>
             <RatingTitle>AVALIAÇÃO</RatingTitle>
             <RatingScore>5.0</RatingScore>
-            {/* <RatingIcon width={16} height={16} /> */}
+            <AntDesign name="star" size={16} color={colors.yellow} />
           </RatingContainer>
         </HeaderDown>
       </Header>
       <Body>
-        <MenuCard
-          title="MEUS DADOS"
-          Icon={require("../../assets/profile/clipboard.svg").default}
-        />
-        <MenuCard
-          title="QUESTÕES FREQUENTES"
-          Icon={require("../../assets/profile/help.svg").default}
-        />
-        <MenuCard
-          title="MANUAL DO USUÁRIO"
-          Icon={require("../../assets/profile/book.svg").default}
-        />
+        <MenuCard title="MEUS DADOS">
+          <Feather name="clipboard" size={24} color={colors.blackPurple} />
+        </MenuCard>
+        <MenuCard title="QUESTÕES FREQUENTES">
+          <Feather name="help-circle" size={24} color={colors.blackPurple} />
+        </MenuCard>
+        <MenuCard title="MANUAL DO USUÁRIO">
+          <Feather name="book-open" size={24} color={colors.blackPurple} />
+        </MenuCard>
       </Body>
     </Container>
   );
