@@ -14,10 +14,10 @@ export const MyServicesDone: React.FC = () => {
         <HeaderTitle>Meus Serviços</HeaderTitle>
       </Header>
       <Body>
-        <StatusCard
+        {/* <StatusCard
           title="tes"
-          Icon={require("../../assets/dollar-sign.svg").default}
-        />
+          // Icon={require("../../assets/dollar-sign.svg").default}
+        /> */}
       </Body>
     </Container>
   );

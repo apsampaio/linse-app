@@ -50,15 +50,11 @@ const ProviderRegister: React.FC = () => {
           </ButtonAgree>
           {isProvider && (
             <>
-              <Input
-                name="carrer"
-                placeholder="Profissão"
-                Icon={require("../../assets/career.svg").default}
-              />
+              <Input name="carrer" placeholder="Profissão" icon="user" />
               <Input
                 name="average-value"
                 placeholder="Valor por serviço"
-                Icon={require("../../assets/money.svg").default}
+                icon="user"
               />
             </>
           )}

@@ -32,42 +32,17 @@ const SignUp: React.FC = () => {
           </HeaderDescription>
         </Header>
         <Body>
-          <Input
-            name="name"
-            placeholder="Nome Completo"
-            Icon={require("../../assets/user.svg").default}
-          />
-          <Input
-            name="cpf"
-            placeholder="CPF"
-            Icon={require("../../assets/cpf.svg").default}
-          />
-          <Input
-            name="whatsapp"
-            placeholder="WhatsApp"
-            Icon={require("../../assets/message-circle.svg").default}
-          />
-          <Input
-            name="mail"
-            placeholder="E-mail"
-            Icon={require("../../assets/mail.svg").default}
-          />
-          <Input
-            name="cep"
-            placeholder="CEP"
-            Icon={require("../../assets/cep.svg").default}
-          />
-          <Input
-            name="password"
-            placeholder="Senha"
-            isSecret
-            Icon={require("../../assets/password.svg").default}
-          />
+          <Input name="name" placeholder="Nome Completo" icon="user" />
+          <Input name="cpf" placeholder="CPF" icon="credit-card" />
+          <Input name="whatsapp" placeholder="WhatsApp" icon="message-circle" />
+          <Input name="mail" placeholder="E-mail" icon="mail" />
+          <Input name="cep" placeholder="CEP" icon="map-pin" />
+          <Input name="password" placeholder="Senha" isSecret icon="lock" />
           <Input
             name="confirmPassword"
             placeholder="Confirmar Senha"
             isSecret
-            Icon={require("../../assets/password.svg").default}
+            icon="lock"
           />
           <Button onPress={() => navigation.navigate("ProviderRegister")}>
             <ButtonTitle>Próximo</ButtonTitle>

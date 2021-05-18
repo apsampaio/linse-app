@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import colors from "../../styles/colors";
 
+import { FeatherIcon } from "../../interfaces/FeatherIcon";
+import { Feather } from "@expo/vector-icons";
+
 import {
   Container,
   TextInput,
@@ -13,7 +16,7 @@ interface InputProps {
   name: string;
   placeholder: string;
   isSecret?: boolean;
-  Icon?: any;
+  icon: FeatherIcon;
 }
 
 // TODO - [ ] ADD INPUT MASK
@@ -21,7 +24,7 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({
   name,
-  Icon,
+  icon,
   placeholder,
   isSecret = false,
   ...rest
@@ -43,7 +46,11 @@ const Input: React.FC<InputProps> = ({
   return (
     <Container isFocused={isFocused} isErrored={false}>
       <IconContainer>
-        {/* <Icon color={isFocused ? colors.blue : colors.darkGray} /> */}
+        <Feather
+          name={icon}
+          size={24}
+          color={isFocused ? colors.blue : colors.darkGray}
+        />
       </IconContainer>
       <TextInput
         onFocus={handleFocus}
@@ -54,11 +61,11 @@ const Input: React.FC<InputProps> = ({
       />
       {isSecret && (
         <SecretIconContainer onPress={handleTogglePasswordVisible}>
-          {/* {passwordVisible ? (
-            <EyeIcon color={colors.darkGray} />
+          {passwordVisible ? (
+            <Feather name="eye" size={24} color={colors.darkGray} />
           ) : (
-            <EyeOffIcon color={colors.blue} />
-          )} */}
+            <Feather name="eye-off" size={24} color={colors.blue} />
+          )}
         </SecretIconContainer>
       )}
     </Container>
