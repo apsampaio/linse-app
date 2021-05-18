@@ -55,20 +55,19 @@ const Home: React.FC = () => {
         </ServiceContainer>
         <Separator />
         <ServiceTitle>Minhas atividades</ServiceTitle>
-        <MenuCard notification={true} title="SOLICITAR SERVIÇO">
-          <Feather name="plus-square" size={24} color={colors.blackPurple} />
-        </MenuCard>
+        <MenuCard
+          notification={true}
+          title="SOLICITAR SERVIÇO"
+          icon="plus-square"
+        />
         <MenuCard
           onPress={() => {
             navigation.navigate("MyServices");
           }}
           title="MEUS SERVIÇOS"
-        >
-          <Feather name="briefcase" size={24} color={colors.blackPurple} />
-        </MenuCard>
-        <MenuCard title="MINHAS OFERTAS">
-          <Feather name="dollar-sign" size={24} color={colors.blackPurple} />
-        </MenuCard>
+          icon="briefcase"
+        />
+        <MenuCard title="MINHAS OFERTAS" icon="dollar-sign" />
       </Body>
     </Container>
   );

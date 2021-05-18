@@ -51,15 +51,9 @@ const Profile: React.FC = () => {
         </HeaderDown>
       </Header>
       <Body>
-        <MenuCard title="MEUS DADOS">
-          <Feather name="clipboard" size={24} color={colors.blackPurple} />
-        </MenuCard>
-        <MenuCard title="QUESTÕES FREQUENTES">
-          <Feather name="help-circle" size={24} color={colors.blackPurple} />
-        </MenuCard>
-        <MenuCard title="MANUAL DO USUÁRIO">
-          <Feather name="book-open" size={24} color={colors.blackPurple} />
-        </MenuCard>
+        <MenuCard title="MEUS DADOS" icon="clipboard" />
+        <MenuCard title="QUESTÕES FREQUENTES" icon="help-circle" />
+        <MenuCard title="MANUAL DO USUÁRIO" icon="book-open" />
       </Body>
     </Container>
   );
