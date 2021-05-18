@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { TouchableOpacityProps } from "react-native";
 
+import { Feather } from "@expo/vector-icons";
+
 import {
   Container,
   Title,
@@ -12,14 +14,13 @@ import {
 
 interface MenuProps extends TouchableOpacityProps {
   title: string;
-  Icon?: any;
   notification?: boolean;
 }
 
 const MenuCard: React.FC<MenuProps> = ({
   title,
-  Icon,
   notification = false,
+  children,
   ...rest
 }) => {
   const [hasNotification, setHasNotification] = useState(notification);
@@ -27,7 +28,7 @@ const MenuCard: React.FC<MenuProps> = ({
   return (
     <Container>
       <Content>
-        {/* <Icon /> */}
+        {children}
         <Title>{title}</Title>
         {hasNotification && (
           <Notification>
@@ -35,7 +36,7 @@ const MenuCard: React.FC<MenuProps> = ({
           </Notification>
         )}
       </Content>
-      {/* <Chevron /> */}
+      <Feather name="chevron-right" size={24} color="#737380" />
     </Container>
   );
 };

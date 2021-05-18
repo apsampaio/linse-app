@@ -4,6 +4,7 @@ import colors from "../../styles/colors";
 
 import { useNavigation } from "@react-navigation/core";
 import MenuCard from "../../components/MenuCard";
+import { Feather } from "@expo/vector-icons";
 
 import {
   Container,
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
             <HeaderGreetingText>Andre Sampaio</HeaderGreetingText>
           </HeaderGreeting>
           <HeaderProfileButton onPress={() => navigation.navigate("Profile")}>
-            {/* <UserIcon fill={colors.yellow} /> */}
+            <Feather name="user" size={24} color={colors.yellow} />
             <HeaderProfileText>Perfil</HeaderProfileText>
           </HeaderProfileButton>
         </HeaderUp>
@@ -54,22 +55,20 @@ const Home: React.FC = () => {
         </ServiceContainer>
         <Separator />
         <ServiceTitle>Minhas atividades</ServiceTitle>
-        <MenuCard
-          notification={true}
-          title="SOLICITAR SERVIÇO"
-          Icon={require("../../assets/plus-square.svg").default}
-        />
+        <MenuCard notification={true} title="SOLICITAR SERVIÇO">
+          <Feather name="plus-square" size={24} color={colors.blackPurple} />
+        </MenuCard>
         <MenuCard
           onPress={() => {
             navigation.navigate("MyServices");
           }}
           title="MEUS SERVIÇOS"
-          Icon={require("../../assets/briefcase.svg").default}
-        />
-        <MenuCard
-          title="MINHAS OFERTAS"
-          Icon={require("../../assets/dollar-sign.svg").default}
-        />
+        >
+          <Feather name="briefcase" size={24} color={colors.blackPurple} />
+        </MenuCard>
+        <MenuCard title="MINHAS OFERTAS">
+          <Feather name="dollar-sign" size={24} color={colors.blackPurple} />
+        </MenuCard>
       </Body>
     </Container>
   );
